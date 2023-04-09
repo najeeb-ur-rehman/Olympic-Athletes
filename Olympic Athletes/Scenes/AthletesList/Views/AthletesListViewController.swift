@@ -27,7 +27,7 @@ private extension AthletesListViewController {
     func setupTableView() {
         athletesListView.tableView.register(GameAthletesTableViewCell.nib, forCellReuseIdentifier: GameAthletesTableViewCell.reuseIdentifier)
         athletesListView.tableView.dataSource = self
-        athletesListView.tableView.rowHeight = 200
+        athletesListView.tableView.rowHeight = UITableView.automaticDimension
     }
     
 }

@@ -15,9 +15,11 @@
 		1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */; };
 		1DF2BE5029E3531E00199095 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE4F29E3531E00199095 /* Athlete.swift */; };
 		1DF2BE5229E353D900199095 /* AthletesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5129E353D900199095 /* AthletesListView.swift */; };
-		1DF2BE5529E3549B00199095 /* AthletesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */; };
+		1DF2BE5529E3549B00199095 /* GameAthletesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5429E3549B00199095 /* GameAthletesTableViewCell.swift */; };
 		1DF2BE5729E354AC00199095 /* GameAthletesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */; };
 		1DF2BE5929E3553900199095 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5829E3553900199095 /* Game.swift */; };
+		1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5B29E360EF00199095 /* AthleteCollectionViewCell.swift */; };
+		1DF2BE5E29E3610C00199095 /* AthleteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5D29E3610C00199095 /* AthleteCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +33,11 @@
 		1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListViewController.swift; sourceTree = "<group>"; };
 		1DF2BE4F29E3531E00199095 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		1DF2BE5129E353D900199095 /* AthletesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListView.swift; sourceTree = "<group>"; };
-		1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListTableViewCell.swift; sourceTree = "<group>"; };
+		1DF2BE5429E3549B00199095 /* GameAthletesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAthletesTableViewCell.swift; sourceTree = "<group>"; };
 		1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameAthletesTableViewCell.xib; sourceTree = "<group>"; };
 		1DF2BE5829E3553900199095 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1DF2BE5B29E360EF00199095 /* AthleteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DF2BE5D29E3610C00199095 /* AthleteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthleteCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		1DF2BE4C29E3528300199095 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1DF2BE5A29E360CC00199095 /* AthleteCollectionViewCell */,
 				1DF2BE5329E3544500199095 /* GameAthletesTableViewCell */,
 				1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */,
 				1DF2BE5129E353D900199095 /* AthletesListView.swift */,
@@ -156,10 +161,19 @@
 		1DF2BE5329E3544500199095 /* GameAthletesTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */,
+				1DF2BE5429E3549B00199095 /* GameAthletesTableViewCell.swift */,
 				1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */,
 			);
 			path = GameAthletesTableViewCell;
+			sourceTree = "<group>";
+		};
+		1DF2BE5A29E360CC00199095 /* AthleteCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE5B29E360EF00199095 /* AthleteCollectionViewCell.swift */,
+				1DF2BE5D29E3610C00199095 /* AthleteCollectionViewCell.xib */,
+			);
+			path = AthleteCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +237,7 @@
 				1DF2BE3D29E344A800199095 /* LaunchScreen.storyboard in Resources */,
 				1DF2BE5729E354AC00199095 /* GameAthletesTableViewCell.xib in Resources */,
 				1DF2BE3A29E344A800199095 /* Assets.xcassets in Resources */,
+				1DF2BE5E29E3610C00199095 /* AthleteCollectionViewCell.xib in Resources */,
 				1DF2BE3829E344A700199095 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */,
 				1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */,
-				1DF2BE5529E3549B00199095 /* AthletesListTableViewCell.swift in Sources */,
+				1DF2BE5529E3549B00199095 /* GameAthletesTableViewCell.swift in Sources */,
 				1DF2BE5929E3553900199095 /* Game.swift in Sources */,
 				1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */,
 				1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */,
