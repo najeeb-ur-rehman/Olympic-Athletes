@@ -56,15 +56,55 @@
 		1DF2BE2F29E344A700199095 /* Olympic Athletes */ = {
 			isa = PBXGroup;
 			children = (
-				1DF2BE3029E344A700199095 /* AppDelegate.swift */,
-				1DF2BE3229E344A700199095 /* SceneDelegate.swift */,
-				1DF2BE3429E344A700199095 /* ViewController.swift */,
-				1DF2BE3629E344A700199095 /* Main.storyboard */,
-				1DF2BE3929E344A800199095 /* Assets.xcassets */,
-				1DF2BE3B29E344A800199095 /* LaunchScreen.storyboard */,
-				1DF2BE3E29E344A800199095 /* Info.plist */,
+				1DF2BE4629E351A800199095 /* App Files */,
+				1DF2BE4829E351DA00199095 /* Scenes */,
+				1DF2BE4529E3518C00199095 /* Storyboards */,
+				1DF2BE4429E3517800199095 /* Resources */,
+				1DF2BE4729E351C500199095 /* Configurations */,
 			);
 			path = "Olympic Athletes";
+			sourceTree = "<group>";
+		};
+		1DF2BE4429E3517800199095 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE3929E344A800199095 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1DF2BE4529E3518C00199095 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE3629E344A700199095 /* Main.storyboard */,
+				1DF2BE3B29E344A800199095 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1DF2BE4629E351A800199095 /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE3229E344A700199095 /* SceneDelegate.swift */,
+				1DF2BE3029E344A700199095 /* AppDelegate.swift */,
+			);
+			path = "App Files";
+			sourceTree = "<group>";
+		};
+		1DF2BE4729E351C500199095 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE3E29E344A800199095 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		1DF2BE4829E351DA00199095 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE3429E344A700199095 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +329,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.najeeb.Olympic-Athletes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,11 +360,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.najeeb.Olympic-Athletes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
