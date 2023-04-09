@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3029E344A700199095 /* AppDelegate.swift */; };
 		1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3229E344A700199095 /* SceneDelegate.swift */; };
-		1DF2BE3529E344A700199095 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3429E344A700199095 /* ViewController.swift */; };
 		1DF2BE3829E344A700199095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3629E344A700199095 /* Main.storyboard */; };
 		1DF2BE3A29E344A800199095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3929E344A800199095 /* Assets.xcassets */; };
 		1DF2BE3D29E344A800199095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3B29E344A800199095 /* LaunchScreen.storyboard */; };
+		1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */; };
+		1DF2BE5029E3531E00199095 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE4F29E3531E00199095 /* Athlete.swift */; };
+		1DF2BE5229E353D900199095 /* AthletesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5129E353D900199095 /* AthletesListView.swift */; };
+		1DF2BE5529E3549B00199095 /* AthletesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */; };
+		1DF2BE5729E354AC00199095 /* GameAthletesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */; };
+		1DF2BE5929E3553900199095 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5829E3553900199095 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DF2BE2D29E344A700199095 /* Olympic Athletes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olympic Athletes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF2BE3029E344A700199095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF2BE3229E344A700199095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DF2BE3429E344A700199095 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DF2BE3729E344A700199095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DF2BE3929E344A800199095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DF2BE3C29E344A800199095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DF2BE3E29E344A800199095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListViewController.swift; sourceTree = "<group>"; };
+		1DF2BE4F29E3531E00199095 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		1DF2BE5129E353D900199095 /* AthletesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListView.swift; sourceTree = "<group>"; };
+		1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListTableViewCell.swift; sourceTree = "<group>"; };
+		1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameAthletesTableViewCell.xib; sourceTree = "<group>"; };
+		1DF2BE5829E3553900199095 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1DF2BE4629E351A800199095 /* App Files */,
+				1DF2BE4E29E352A100199095 /* Models */,
 				1DF2BE4829E351DA00199095 /* Scenes */,
 				1DF2BE4529E3518C00199095 /* Storyboards */,
 				1DF2BE4429E3517800199095 /* Resources */,
@@ -102,9 +113,53 @@
 		1DF2BE4829E351DA00199095 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1DF2BE3429E344A700199095 /* ViewController.swift */,
+				1DF2BE4929E3523700199095 /* AthletesList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1DF2BE4929E3523700199095 /* AthletesList */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE4D29E3528D00199095 /* ViewModels */,
+				1DF2BE4C29E3528300199095 /* Views */,
+			);
+			path = AthletesList;
+			sourceTree = "<group>";
+		};
+		1DF2BE4C29E3528300199095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE5329E3544500199095 /* GameAthletesTableViewCell */,
+				1DF2BE4A29E3526B00199095 /* AthletesListViewController.swift */,
+				1DF2BE5129E353D900199095 /* AthletesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1DF2BE4D29E3528D00199095 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1DF2BE4E29E352A100199095 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE4F29E3531E00199095 /* Athlete.swift */,
+				1DF2BE5829E3553900199095 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DF2BE5329E3544500199095 /* GameAthletesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2BE5429E3549B00199095 /* AthletesListTableViewCell.swift */,
+				1DF2BE5629E354AB00199095 /* GameAthletesTableViewCell.xib */,
+			);
+			path = GameAthletesTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DF2BE3D29E344A800199095 /* LaunchScreen.storyboard in Resources */,
+				1DF2BE5729E354AC00199095 /* GameAthletesTableViewCell.xib in Resources */,
 				1DF2BE3A29E344A800199095 /* Assets.xcassets in Resources */,
 				1DF2BE3829E344A700199095 /* Main.storyboard in Resources */,
 			);
@@ -178,9 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF2BE3529E344A700199095 /* ViewController.swift in Sources */,
+				1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */,
+				1DF2BE5529E3549B00199095 /* AthletesListTableViewCell.swift in Sources */,
+				1DF2BE5929E3553900199095 /* Game.swift in Sources */,
 				1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */,
 				1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */,
+				1DF2BE5029E3531E00199095 /* Athlete.swift in Sources */,
+				1DF2BE5229E353D900199095 /* AthletesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_FILE = "Olympic Athletes/Configurations/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -359,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Olympic Athletes/Info.plist";
+				INFOPLIST_FILE = "Olympic Athletes/Configurations/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
