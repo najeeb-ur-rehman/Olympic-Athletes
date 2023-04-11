@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D8DF85C29E4E9620037BA2D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */; };
 		1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3029E344A700199095 /* AppDelegate.swift */; };
 		1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3229E344A700199095 /* SceneDelegate.swift */; };
 		1DF2BE3829E344A700199095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3629E344A700199095 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1DF2BE2D29E344A700199095 /* Olympic Athletes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olympic Athletes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF2BE3029E344A700199095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF2BE3229E344A700199095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D8DF85D29E4E9680037BA2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1DF2BE2429E344A700199095 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 				1DF2BE4529E3518C00199095 /* Storyboards */,
 				1DF2BE4429E3517800199095 /* Resources */,
 				1DF2BE4729E351C500199095 /* Configurations */,
+				1D8DF85D29E4E9680037BA2D /* Extensions */,
 			);
 			path = "Olympic Athletes";
 			sourceTree = "<group>";
@@ -252,6 +263,7 @@
 				1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */,
 				1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */,
 				1DF2BE5529E3549B00199095 /* GameAthletesTableViewCell.swift in Sources */,
+				1D8DF85C29E4E9620037BA2D /* UIView+Extensions.swift in Sources */,
 				1DF2BE5929E3553900199095 /* Game.swift in Sources */,
 				1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */,
 				1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */,

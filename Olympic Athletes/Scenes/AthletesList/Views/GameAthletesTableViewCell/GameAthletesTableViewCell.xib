@@ -10,27 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameAthletesTableViewCell" rowHeight="280" id="4lG-vm-xrf" customClass="GameAthletesTableViewCell" customModule="Olympic_Athletes" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="583" height="280"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GameAthletesTableViewCell" rowHeight="234" id="4lG-vm-xrf" customClass="GameAthletesTableViewCell" customModule="Olympic_Athletes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="564" height="234"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4lG-vm-xrf" id="YL7-Yh-zN7">
-                <rect key="frame" x="0.0" y="0.0" width="583" height="280"/>
+                <rect key="frame" x="0.0" y="0.0" width="564" height="234"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8c-TS-1zl">
-                        <rect key="frame" x="0.0" y="0.0" width="583" height="280"/>
+                        <rect key="frame" x="10" y="0.0" width="544" height="234"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-07-QGn">
-                                <rect key="frame" x="20" y="9.9999999999999982" width="543" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="9.9999999999999982" width="544" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jKr-Se-WbE">
-                                <rect key="frame" x="10" y="50.333333333333343" width="563" height="160"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jKr-Se-WbE">
+                                <rect key="frame" x="0.0" y="50.333333333333343" width="544" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="ruA-cD-tOV"/>
+                                    <constraint firstAttribute="height" constant="152" id="ruA-cD-tOV"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LLa-0k-acJ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,21 +42,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zaX-07-QGn" firstAttribute="leading" secondItem="I8c-TS-1zl" secondAttribute="leading" constant="20" id="1C4-dy-HV9"/>
+                            <constraint firstItem="zaX-07-QGn" firstAttribute="leading" secondItem="I8c-TS-1zl" secondAttribute="leading" id="1C4-dy-HV9"/>
                             <constraint firstItem="jKr-Se-WbE" firstAttribute="top" secondItem="zaX-07-QGn" secondAttribute="bottom" constant="20" id="38d-Su-2Ah"/>
-                            <constraint firstItem="jKr-Se-WbE" firstAttribute="leading" secondItem="I8c-TS-1zl" secondAttribute="leading" constant="10" id="AkW-FD-fsI"/>
+                            <constraint firstItem="jKr-Se-WbE" firstAttribute="leading" secondItem="I8c-TS-1zl" secondAttribute="leading" id="AkW-FD-fsI"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jKr-Se-WbE" secondAttribute="bottom" constant="20" id="KTA-1w-MZ4"/>
-                            <constraint firstAttribute="trailing" secondItem="zaX-07-QGn" secondAttribute="trailing" constant="20" id="QWC-tv-9cU"/>
+                            <constraint firstAttribute="trailing" secondItem="zaX-07-QGn" secondAttribute="trailing" id="QWC-tv-9cU"/>
                             <constraint firstItem="zaX-07-QGn" firstAttribute="top" secondItem="I8c-TS-1zl" secondAttribute="top" constant="10" id="ptj-8Q-ogs"/>
-                            <constraint firstAttribute="trailing" secondItem="jKr-Se-WbE" secondAttribute="trailing" constant="10" id="tId-4X-ymx"/>
+                            <constraint firstAttribute="trailing" secondItem="jKr-Se-WbE" secondAttribute="trailing" id="tId-4X-ymx"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGreenColor"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="I8c-TS-1zl" secondAttribute="bottom" id="7qk-jS-s5Q"/>
-                    <constraint firstItem="I8c-TS-1zl" firstAttribute="leading" secondItem="YL7-Yh-zN7" secondAttribute="leading" id="Oi6-gt-qsQ"/>
-                    <constraint firstAttribute="trailing" secondItem="I8c-TS-1zl" secondAttribute="trailing" id="T9F-QS-YrA"/>
+                    <constraint firstItem="I8c-TS-1zl" firstAttribute="leading" secondItem="YL7-Yh-zN7" secondAttribute="leading" constant="10" id="Oi6-gt-qsQ"/>
+                    <constraint firstAttribute="trailing" secondItem="I8c-TS-1zl" secondAttribute="trailing" constant="10" id="T9F-QS-YrA"/>
                     <constraint firstItem="I8c-TS-1zl" firstAttribute="top" secondItem="YL7-Yh-zN7" secondAttribute="top" id="WQg-Fh-DhI"/>
                 </constraints>
             </tableViewCellContentView>
@@ -64,15 +63,12 @@
                 <outlet property="athletesCollectionView" destination="jKr-Se-WbE" id="dU5-WC-Po1"/>
                 <outlet property="gameNameLabel" destination="zaX-07-QGn" id="WVJ-5L-ZtR"/>
             </connections>
-            <point key="canvasLocation" x="-177.86259541984731" y="-13.380281690140846"/>
+            <point key="canvasLocation" x="-192.36641221374046" y="-29.577464788732396"/>
         </tableViewCell>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

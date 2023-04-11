@@ -13,4 +13,17 @@ class AthleteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupViewsAppearance()
+    }
+    
+    
+    func setupViewsAppearance() {
+        profileImageView.roundCorners(radius: 50, shouldClip: true)
+        nameLabel.font = .systemFont(ofSize: 16, weight: .medium)
+    }
+    
 }
