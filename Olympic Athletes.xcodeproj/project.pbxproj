@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D34BD6B29E63C5100322D18 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6A29E63C5100322D18 /* LoadingView.swift */; };
+		1D34BD6D29E66DA100322D18 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */; };
+		1D34BD6F29E6713000322D18 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */; };
 		1D8DF85C29E4E9620037BA2D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */; };
+		1D8DF86029E4EF4B0037BA2D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF85F29E4EF4B0037BA2D /* NetworkClient.swift */; };
+		1D8DF86229E4EFCA0037BA2D /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86129E4EFCA0037BA2D /* APIEndpoint.swift */; };
+		1D8DF86429E4EFFE0037BA2D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86329E4EFFE0037BA2D /* NetworkError.swift */; };
+		1D8DF86829E4F0AF0037BA2D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86729E4F0AF0037BA2D /* Environment.swift */; };
+		1D8DF86A29E4F1B40037BA2D /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86929E4F1B40037BA2D /* BaseService.swift */; };
+		1D8DF86C29E4F1D80037BA2D /* AthletesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86B29E4F1D80037BA2D /* AthletesService.swift */; };
+		1D8DF86E29E4F1E50037BA2D /* GamesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86D29E4F1E50037BA2D /* GamesService.swift */; };
+		1D8DF87029E4F55B0037BA2D /* AthleteGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86F29E4F55B0037BA2D /* AthleteGameResult.swift */; };
+		1D8DF87229E4FFB40037BA2D /* AthletesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF87129E4FFB40037BA2D /* AthletesListViewModel.swift */; };
 		1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3029E344A700199095 /* AppDelegate.swift */; };
 		1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3229E344A700199095 /* SceneDelegate.swift */; };
 		1DF2BE3829E344A700199095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE3629E344A700199095 /* Main.storyboard */; };
@@ -21,10 +33,24 @@
 		1DF2BE5929E3553900199095 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5829E3553900199095 /* Game.swift */; };
 		1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5B29E360EF00199095 /* AthleteCollectionViewCell.swift */; };
 		1DF2BE5E29E3610C00199095 /* AthleteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2BE5D29E3610C00199095 /* AthleteCollectionViewCell.xib */; };
+		6FFD53D801DA1430B2E679E1 /* Pods_Olympic_Athletes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678A3B2871C983B37A700321 /* Pods_Olympic_Athletes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151C647674CE799C3135835B /* Pods-Olympic Athletes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olympic Athletes.debug.xcconfig"; path = "Target Support Files/Pods-Olympic Athletes/Pods-Olympic Athletes.debug.xcconfig"; sourceTree = "<group>"; };
+		1D34BD6A29E63C5100322D18 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		1D8DF85F29E4EF4B0037BA2D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		1D8DF86129E4EFCA0037BA2D /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		1D8DF86329E4EFFE0037BA2D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1D8DF86729E4F0AF0037BA2D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1D8DF86929E4F1B40037BA2D /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		1D8DF86B29E4F1D80037BA2D /* AthletesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesService.swift; sourceTree = "<group>"; };
+		1D8DF86D29E4F1E50037BA2D /* GamesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesService.swift; sourceTree = "<group>"; };
+		1D8DF86F29E4F55B0037BA2D /* AthleteGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteGameResult.swift; sourceTree = "<group>"; };
+		1D8DF87129E4FFB40037BA2D /* AthletesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesListViewModel.swift; sourceTree = "<group>"; };
 		1DF2BE2D29E344A700199095 /* Olympic Athletes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Olympic Athletes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF2BE3029E344A700199095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF2BE3229E344A700199095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +66,8 @@
 		1DF2BE5829E3553900199095 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1DF2BE5B29E360EF00199095 /* AthleteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCollectionViewCell.swift; sourceTree = "<group>"; };
 		1DF2BE5D29E3610C00199095 /* AthleteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthleteCollectionViewCell.xib; sourceTree = "<group>"; };
+		678A3B2871C983B37A700321 /* Pods_Olympic_Athletes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Olympic_Athletes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E17F3BBCB3CE404AA0DC827 /* Pods-Olympic Athletes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olympic Athletes.release.xcconfig"; path = "Target Support Files/Pods-Olympic Athletes/Pods-Olympic Athletes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,18 +75,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FFD53D801DA1430B2E679E1 /* Pods_Olympic_Athletes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D34BD6929E63C3E00322D18 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1D34BD6A29E63C5100322D18 /* LoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		1D8DF85D29E4E9680037BA2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */,
+				1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */,
+				1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D8DF85E29E4EF010037BA2D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF85F29E4EF4B0037BA2D /* NetworkClient.swift */,
+				1D8DF86129E4EFCA0037BA2D /* APIEndpoint.swift */,
+				1D8DF86329E4EFFE0037BA2D /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1D8DF86529E4F0490037BA2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF86929E4F1B40037BA2D /* BaseService.swift */,
+				1D8DF86B29E4F1D80037BA2D /* AthletesService.swift */,
+				1D8DF86D29E4F1E50037BA2D /* GamesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1D8DF86629E4F08F0037BA2D /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF86729E4F0AF0037BA2D /* Environment.swift */,
+			);
+			path = Globals;
 			sourceTree = "<group>";
 		};
 		1DF2BE2429E344A700199095 = {
@@ -66,6 +133,8 @@
 			children = (
 				1DF2BE2F29E344A700199095 /* Olympic Athletes */,
 				1DF2BE2E29E344A700199095 /* Products */,
+				B12753948311EB0C96EEAF04 /* Pods */,
+				731B52380B2EF55FCC813B20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +149,10 @@
 		1DF2BE2F29E344A700199095 /* Olympic Athletes */ = {
 			isa = PBXGroup;
 			children = (
+				1D34BD6929E63C3E00322D18 /* Components */,
+				1D8DF86629E4F08F0037BA2D /* Globals */,
+				1D8DF86529E4F0490037BA2D /* Services */,
+				1D8DF85E29E4EF010037BA2D /* Network */,
 				1DF2BE4629E351A800199095 /* App Files */,
 				1DF2BE4E29E352A100199095 /* Models */,
 				1DF2BE4829E351DA00199095 /* Scenes */,
@@ -156,6 +229,7 @@
 		1DF2BE4D29E3528D00199095 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1D8DF87129E4FFB40037BA2D /* AthletesListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,6 +239,7 @@
 			children = (
 				1DF2BE4F29E3531E00199095 /* Athlete.swift */,
 				1DF2BE5829E3553900199095 /* Game.swift */,
+				1D8DF86F29E4F55B0037BA2D /* AthleteGameResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +262,23 @@
 			path = AthleteCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		731B52380B2EF55FCC813B20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				678A3B2871C983B37A700321 /* Pods_Olympic_Athletes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B12753948311EB0C96EEAF04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				151C647674CE799C3135835B /* Pods-Olympic Athletes.debug.xcconfig */,
+				7E17F3BBCB3CE404AA0DC827 /* Pods-Olympic Athletes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DF2BE4129E344A800199095 /* Build configuration list for PBXNativeTarget "Olympic Athletes" */;
 			buildPhases = (
+				4978672F34C8E565AFFA653C /* [CP] Check Pods Manifest.lock */,
 				1DF2BE2929E344A700199095 /* Sources */,
 				1DF2BE2A29E344A700199095 /* Frameworks */,
 				1DF2BE2B29E344A700199095 /* Resources */,
+				C159174325E3591FD45E4721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,19 +349,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4978672F34C8E565AFFA653C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Olympic Athletes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C159174325E3591FD45E4721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Olympic Athletes/Pods-Olympic Athletes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Olympic Athletes/Pods-Olympic Athletes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Olympic Athletes/Pods-Olympic Athletes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1DF2BE2929E344A700199095 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */,
+				1D8DF86229E4EFCA0037BA2D /* APIEndpoint.swift in Sources */,
+				1D8DF87229E4FFB40037BA2D /* AthletesListViewModel.swift in Sources */,
+				1D8DF87029E4F55B0037BA2D /* AthleteGameResult.swift in Sources */,
+				1D8DF86029E4EF4B0037BA2D /* NetworkClient.swift in Sources */,
 				1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */,
+				1D8DF86A29E4F1B40037BA2D /* BaseService.swift in Sources */,
 				1DF2BE5529E3549B00199095 /* GameAthletesTableViewCell.swift in Sources */,
 				1D8DF85C29E4E9620037BA2D /* UIView+Extensions.swift in Sources */,
 				1DF2BE5929E3553900199095 /* Game.swift in Sources */,
+				1D34BD6D29E66DA100322D18 /* UIImageView+Extensions.swift in Sources */,
 				1DF2BE3129E344A700199095 /* AppDelegate.swift in Sources */,
+				1D8DF86829E4F0AF0037BA2D /* Environment.swift in Sources */,
+				1D34BD6F29E6713000322D18 /* UIFont+Extensions.swift in Sources */,
 				1DF2BE3329E344A700199095 /* SceneDelegate.swift in Sources */,
+				1D8DF86E29E4F1E50037BA2D /* GamesService.swift in Sources */,
+				1D8DF86429E4EFFE0037BA2D /* NetworkError.swift in Sources */,
+				1D8DF86C29E4F1D80037BA2D /* AthletesService.swift in Sources */,
 				1DF2BE5029E3531E00199095 /* Athlete.swift in Sources */,
+				1D34BD6B29E63C5100322D18 /* LoadingView.swift in Sources */,
 				1DF2BE5229E353D900199095 /* AthletesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +558,7 @@
 		};
 		1DF2BE4229E344A800199095 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151C647674CE799C3135835B /* Pods-Olympic Athletes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +569,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,6 +590,7 @@
 		};
 		1DF2BE4329E344A800199095 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E17F3BBCB3CE404AA0DC827 /* Pods-Olympic Athletes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,7 +601,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympic Athletes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -23,7 +23,12 @@ class AthleteCollectionViewCell: UICollectionViewCell {
     
     func setupViewsAppearance() {
         profileImageView.roundCorners(radius: 50, shouldClip: true)
-        nameLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        nameLabel.font = .primaryRegular(ofSize: 14)
     }
     
+    func configureAthleteData(_ athlete: Athlete) {
+        let athleteName = "\(athlete.name ?? "") \(athlete.surname ?? "")"
+        nameLabel.text = athleteName
+        profileImageView.setAthletePhotoWithId(athlete.photoId)
+    }
 }

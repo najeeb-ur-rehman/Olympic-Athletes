@@ -12,11 +12,30 @@ class GameAthletesTableViewCell: UITableViewCell {
     // MARK: Outlets
     @IBOutlet weak var athletesCollectionView: UICollectionView!
     @IBOutlet weak var gameNameLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var emptyDataView: UIView!
+    @IBOutlet weak var emptyDataLabel: UILabel!
+    @IBOutlet weak var tryAgainButton: UIButton!
+    
+    var athletes = [Athlete]()
+    var errorMessage: String?
+    var isLoading = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupViewsAppearance()
         setupCollectionView()
+    }
+    
+    func setupViewsAppearance() {
+        gameNameLabel.font = .primaryBold(ofSize: 18)
+        emptyDataLabel.font = .primaryRegular(ofSize: 14)
+        tryAgainButton.titleLabel?.font = .primaryBold(ofSize: 14)
+        tryAgainButton.setTitleColor(.systemGray, for: .normal)
+        tryAgainButton.addBorder(color: .systemGray)
+        tryAgainButton.roundCorners(radius: 12)
     }
     
     func setupCollectionView() {
@@ -24,12 +43,46 @@ class GameAthletesTableViewCell: UITableViewCell {
         athletesCollectionView.dataSource = self
         athletesCollectionView.delegate = self
     }
+    
+    func configureGameData(_ game: Game, athletesResult: Result<[Athlete], AthleteError>, isLoadingAthletes: Bool) {
+        gameNameLabel.text = "\(game.city) \(game.year)"
+        isLoading = isLoadingAthletes
+        errorMessage = nil
+        
+        switch athletesResult {
+        case .success(let athletes):
+            self.athletes = athletes
+        case .failure(let error):
+            self.errorMessage = error.msg
+        }
+        updateViews()
+    }
+    
+    private func updateViews() {
+        if isLoading {
+            emptyDataView.isHidden = true
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
+            if athletes.isEmpty {
+                emptyDataView.isHidden = false
+                emptyDataLabel.text = errorMessage ?? "No athlete found"
+                tryAgainButton.isHidden = errorMessage == nil
+            } else {
+                emptyDataView.isHidden = true
+            }
+            athletesCollectionView.reloadData()
+        }
+    }
 
+    @IBAction func tryAgainButtonAction(_ sender: Any) {
+        
+    }
 }
 
 extension GameAthletesTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return athletes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -37,11 +90,12 @@ extension GameAthletesTableViewCell: UICollectionViewDataSource, UICollectionVie
             withReuseIdentifier: AthleteCollectionViewCell.reuseIdentifier, for: indexPath) as? AthleteCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.configureAthleteData(athletes[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 152)
+        return CGSize(width: 160, height: 144)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

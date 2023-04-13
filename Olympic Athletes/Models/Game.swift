@@ -9,9 +9,9 @@ import Foundation
 
 struct Game: Codable {
     
-    let gameId: Int?
-    let city: String?
-    let year: Int?
+    let gameId: Int
+    let city: String
+    let year: Int
     
     enum CodingKeys: String, CodingKey {
         case gameId = "game_id"
