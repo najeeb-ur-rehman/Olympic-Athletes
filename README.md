@@ -14,7 +14,7 @@
 
 ## How to run and test the app:
 
-1-  Clone the project any of the below command:
+1-  Clone the project with any of the below command:
 
 For Http
   ```sh
