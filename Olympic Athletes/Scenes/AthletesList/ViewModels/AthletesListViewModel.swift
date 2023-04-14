@@ -19,6 +19,7 @@ protocol AthletesListViewModelType {
     func fetchGames()
     func isAthletesLoadingForGameId(_ id: Int) -> Bool
     func showDetailForAthlete(_ athlete: Athlete)
+    func fetchAthletesForGameId(_ id: Int)
     
     var isLoadingPublisher: Published<Bool>.Publisher { get }
     
@@ -27,6 +28,8 @@ protocol AthletesListViewModelType {
     var dataUpdatedForGameIdPublisher:  Published<Int?>.Publisher { get }
     
     var gamesAthletesResult: [Int: Result<[Athlete], AthleteError>] { get }
+    
+    var error: Published<String?>.Publisher { get }
     
 }
 
@@ -42,6 +45,9 @@ class AthletesListViewModel: AthletesListViewModelType {
     var dataUpdatedForGameIdPublisher:  Published<Int?>.Publisher {
         $dataUpdatedForGameId
     }
+    
+    @Published var errorMessage: String? = nil
+    var error: Published<String?>.Publisher { $errorMessage }
     
     @Published private var dataUpdatedForGameId: Int? = nil
     
@@ -65,8 +71,8 @@ class AthletesListViewModel: AthletesListViewModelType {
                 for game in games {
                     self.fetchAthletesForGameId(game.gameId)
                 }
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.errorMessage = "Something went wrong. \n Failed to load the data, try again later"
             }
         
         }

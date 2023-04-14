@@ -21,7 +21,9 @@ class AthletesListViewController: UIViewController {
     // MARK: Builder Method
     static func createInstance(delegate: AthletesListViewModelActionDelegate) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AthletesListViewController") as! AthletesListViewController
+        let vc = storyboard.instantiateViewController(
+            withIdentifier: AthletesListViewController.storyboardId
+        ) as! AthletesListViewController
         let gamesService = GamesService(baseUrl: Environment.current.baseUrl, client: NetworkClient())
         let viewModel = AthletesListViewModel(gamesService, actionsDelegate: delegate)
         vc.viewModel = viewModel
@@ -32,9 +34,29 @@ class AthletesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBar()
         setupBindings()
         setupTableView()
         viewModel.fetchGames()
+    }
+
+}
+
+// MARK: - Helper Methods
+private extension AthletesListViewController {
+    
+    func setupNavigationBar() {
+        self.title = "Olympic Athletes"
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "", style: .plain, target: nil, action: nil
+        )
+        navigationController?.navigationBar.tintColor = .label
+    }
+    
+    func setupTableView() {
+        athletesListView.tableView.register(GameAthletesTableViewCell.nib, forCellReuseIdentifier: GameAthletesTableViewCell.identifier)
+        athletesListView.tableView.dataSource = self
+        athletesListView.tableView.rowHeight = UITableView.automaticDimension
     }
     
     func setupBindings() {
@@ -53,6 +75,14 @@ class AthletesListViewController: UIViewController {
                 } else {
                     LoadingView.hide(self.view)
                 }
+            }
+            .store(in: &cancellables)
+        
+        viewModel.error
+            .compactMap{ $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] errorMessage in
+                showOkAlert(title: "Oops", message: errorMessage, viewController: self)
             }
             .store(in: &cancellables)
     }
@@ -74,17 +104,6 @@ class AthletesListViewController: UIViewController {
         let row = Int(index)
         return IndexPath(row: row, section: 0)
     }
-
-}
-
-// MARK: - Helper Methods
-private extension AthletesListViewController {
-    
-    func setupTableView() {
-        athletesListView.tableView.register(GameAthletesTableViewCell.nib, forCellReuseIdentifier: GameAthletesTableViewCell.reuseIdentifier)
-        athletesListView.tableView.dataSource = self
-        athletesListView.tableView.rowHeight = UITableView.automaticDimension
-    }
     
 }
 
@@ -98,7 +117,7 @@ extension AthletesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: GameAthletesTableViewCell.reuseIdentifier) as? GameAthletesTableViewCell else {
+            withIdentifier: GameAthletesTableViewCell.identifier) as? GameAthletesTableViewCell else {
             return UITableViewCell()
         }
         let game = viewModel.games[indexPath.row]
@@ -108,12 +127,17 @@ extension AthletesListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: GameAthletesTableViewCell Delegate Methods
 extension AthletesListViewController: GameAthletesTableViewCellActionDelegate {
+    
     func showAthleteDetail(_ athlete: Athlete) {
         viewModel.showDetailForAthlete(athlete)
     }
     
-    
+    func fetchAthletesForGameId(_ gameId: Int) {
+        viewModel.fetchAthletesForGameId(gameId)
+        reloadCellWithGameId(gameId)
+    }
     
 }
 

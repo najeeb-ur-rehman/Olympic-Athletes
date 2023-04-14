@@ -8,6 +8,7 @@
 import Foundation
 
 protocol AthleteDetailViewModelType {
+    var title: String { get }
     var bio: String { get }
     var name: String { get }
     var weight: String { get }
@@ -36,6 +37,10 @@ class AthleteDetailViewModel: AthleteDetailViewModelType {
     init(athlete: Athlete, athleteService: AthletesServiceType) {
         self.athlete = athlete
         self.service = athleteService
+    }
+    
+    var title: String {
+        "\(athlete.name ?? "")'s Details"
     }
     
     var photoId: Int? {

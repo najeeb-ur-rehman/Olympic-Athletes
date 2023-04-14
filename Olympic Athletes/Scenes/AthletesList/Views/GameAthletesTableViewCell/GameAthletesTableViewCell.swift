@@ -9,6 +9,7 @@ import UIKit
 
 protocol GameAthletesTableViewCellActionDelegate {
     func showAthleteDetail(_ athlete: Athlete)
+    func fetchAthletesForGameId(_ gameId: Int)
 }
 
 class GameAthletesTableViewCell: UITableViewCell {
@@ -22,6 +23,7 @@ class GameAthletesTableViewCell: UITableViewCell {
     @IBOutlet weak var emptyDataLabel: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     
+    var game: Game?
     var athletes = [Athlete]()
     var errorMessage: String?
     var isLoading = true
@@ -44,12 +46,13 @@ class GameAthletesTableViewCell: UITableViewCell {
     }
     
     func setupCollectionView() {
-        athletesCollectionView.register(AthleteCollectionViewCell.nib, forCellWithReuseIdentifier: AthleteCollectionViewCell.reuseIdentifier)
+        athletesCollectionView.register(AthleteCollectionViewCell.nib, forCellWithReuseIdentifier: AthleteCollectionViewCell.identifier)
         athletesCollectionView.dataSource = self
         athletesCollectionView.delegate = self
     }
     
     func configureGameData(_ game: Game, athletesResult: Result<[Athlete], AthleteError>, isLoadingAthletes: Bool, delegate: GameAthletesTableViewCellActionDelegate) {
+        self.game = game
         self.delegate = delegate
         gameNameLabel.text = "\(game.city) \(game.year)"
         isLoading = isLoadingAthletes
@@ -81,8 +84,11 @@ class GameAthletesTableViewCell: UITableViewCell {
         }
     }
 
-    @IBAction func tryAgainButtonAction(_ sender: Any) {
-        
+    // MARK: Actions
+    @IBAction
+    func tryAgainButtonAction(_ sender: Any) {
+        guard let gameId = game?.gameId else { return }
+        delegate?.fetchAthletesForGameId(gameId)
     }
 }
 
@@ -93,7 +99,7 @@ extension GameAthletesTableViewCell: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: AthleteCollectionViewCell.reuseIdentifier, for: indexPath) as? AthleteCollectionViewCell else {
+            withReuseIdentifier: AthleteCollectionViewCell.identifier, for: indexPath) as? AthleteCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.configureAthleteData(athletes[indexPath.row])
@@ -116,42 +122,4 @@ extension GameAthletesTableViewCell: UICollectionViewDataSource, UICollectionVie
         return .zero
     }
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-extension UIView {
-    
-    static var nib: UINib {
-        UINib(nibName: String(describing: self), bundle: nil)
-    }
-}
-
-extension UITableViewCell {
-    
-    static var reuseIdentifier: String {
-        String(describing: self)
-    }
-}
-
-extension UICollectionViewCell {
-    
-    static var reuseIdentifier: String {
-        String(describing: self)
-    }
 }

@@ -11,6 +11,8 @@
 		1D34BD6D29E66DA100322D18 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */; };
 		1D34BD6F29E6713000322D18 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */; };
 		1D6A5C7C29E8DF4A00D366AE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5C7B29E8DF4A00D366AE /* AppCoordinator.swift */; };
+		1D6A5C8229E8EABF00D366AE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5C8129E8EABF00D366AE /* UIViewController+Extensions.swift */; };
+		1D6A5C8429E8EE3E00D366AE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5C8329E8EE3E00D366AE /* Utils.swift */; };
 		1D80172529E80E65003EB4C6 /* AthleteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172429E80E65003EB4C6 /* AthleteDetailViewController.swift */; };
 		1D80172729E80E7C003EB4C6 /* AthleteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172629E80E7C003EB4C6 /* AthleteDetailView.swift */; };
 		1D80172B29E80EAB003EB4C6 /* AthleteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172A29E80EAB003EB4C6 /* AthleteDetailViewModel.swift */; };
@@ -46,6 +48,8 @@
 		1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		1D6A5C7B29E8DF4A00D366AE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1D6A5C8129E8EABF00D366AE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		1D6A5C8329E8EE3E00D366AE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1D80172429E80E65003EB4C6 /* AthleteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailViewController.swift; sourceTree = "<group>"; };
 		1D80172629E80E7C003EB4C6 /* AthleteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailView.swift; sourceTree = "<group>"; };
 		1D80172A29E80EAB003EB4C6 /* AthleteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailViewModel.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */,
 				1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */,
 				1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */,
+				1D6A5C8129E8EABF00D366AE /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8DF86729E4F0AF0037BA2D /* Environment.swift */,
+				1D6A5C8329E8EE3E00D366AE /* Utils.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -442,6 +448,8 @@
 			files = (
 				1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */,
 				1D8DF86229E4EFCA0037BA2D /* APIEndpoint.swift in Sources */,
+				1D6A5C8429E8EE3E00D366AE /* Utils.swift in Sources */,
+				1D6A5C8229E8EABF00D366AE /* UIViewController+Extensions.swift in Sources */,
 				1D6A5C7C29E8DF4A00D366AE /* AppCoordinator.swift in Sources */,
 				1D8DF87229E4FFB40037BA2D /* AthletesListViewModel.swift in Sources */,
 				1D8DF87029E4F55B0037BA2D /* AthleteGameResult.swift in Sources */,

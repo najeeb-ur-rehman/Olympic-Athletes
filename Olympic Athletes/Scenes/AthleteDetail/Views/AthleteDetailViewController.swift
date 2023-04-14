@@ -21,13 +21,16 @@ class AthleteDetailViewController: UIViewController {
     // MARK: Builder Method
     static func createInstance(_ athlete: Athlete) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AthleteDetailViewController") as! AthleteDetailViewController
+        let vc = storyboard.instantiateViewController(
+            withIdentifier: AthleteDetailViewController.storyboardId
+        ) as! AthleteDetailViewController
         let service = AthletesService(baseUrl: Environment.current.baseUrl, client: NetworkClient())
         let viewModel = AthleteDetailViewModel(athlete: athlete, athleteService: service)
         vc.viewModel = viewModel
         return vc
     }
     
+    // MARK: ViewController Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +38,11 @@ class AthleteDetailViewController: UIViewController {
         viewModel.fetchAthleteResults()
         configureAthleteData()
     }
+
+}
+
+// MARK: Helper Methods
+private extension AthleteDetailViewController {
     
     func setupBindings() {
         viewModel.gameResultsPublisher
@@ -59,6 +67,7 @@ class AthleteDetailViewController: UIViewController {
     func configureAthleteData() {
         configureMarkdownBioView()
         
+        self.title = viewModel.title
         athleteDetailView.nameValueLabel.text = viewModel.name
         athleteDetailView.dobValueLabel.text = viewModel.dob
         athleteDetailView.weightValueLabel.text = viewModel.weight
@@ -80,5 +89,5 @@ class AthleteDetailViewController: UIViewController {
         }
         markdownView.fixInView(athleteDetailView.markdownViewContainer)
     }
-
+    
 }

@@ -9,6 +9,14 @@ import UIKit
 
 extension UIView {
     
+    static var nib: UINib {
+        UINib(nibName: String(describing: self), bundle: nil)
+    }
+    
+    static var identifier: String {
+        String(describing: self)
+    }
+    
     func roundCorners(radius: CGFloat, shouldClip: Bool = false) {
         self.layer.cornerRadius = radius
         self.clipsToBounds = shouldClip
