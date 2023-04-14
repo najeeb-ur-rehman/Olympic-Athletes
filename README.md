@@ -3,18 +3,27 @@
 ##### This app shows the Olympic games and Athletes participated in the respective Olympic game. A view with Athlete detailed information will be shown on tapping of any of the Athlete.  
   
 ### Key Highlights
--    Used Swift 5 with Combine
+-    Used Swift 5 with Combine to bind data
 -    MVVM with Coordinator pattern
+-    Robust and Scalable Network Layer
 -    Works well in Light and Dark mode
--    Losely coupled, Clean, Readable and very well organized code
+-    Adhere SOLID Principles with proper commenting
+-    Clean, Readable and very well organized code
 -    Proper Error handling
+-    Clean and Responsive design
 
 ## How to run and test the app:
 
-1-  Clone the project with the repo link (https or ssh) with the below command:
+1-  Clone the project any of the below command:
 
+For Http
   ```sh
-  git clone {repo-link}
+  git clone https://github.com/najeeb-ur-rehman/Olympic-Athletes.git
+  ```
+  
+  For SSH
+  ```sh
+  git clone git@github.com:najeeb-ur-rehman/Olympic-Athletes.git
   ```
 
 2- Move to the cloned folder and open "Olympic Athletes.xcworkspace" file with Xcode
