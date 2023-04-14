@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol GameAthletesTableViewCellActionDelegate {
+    func showAthleteDetail(_ athlete: Athlete)
+}
+
 class GameAthletesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
@@ -21,6 +25,7 @@ class GameAthletesTableViewCell: UITableViewCell {
     var athletes = [Athlete]()
     var errorMessage: String?
     var isLoading = true
+    var delegate: GameAthletesTableViewCellActionDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,7 +49,8 @@ class GameAthletesTableViewCell: UITableViewCell {
         athletesCollectionView.delegate = self
     }
     
-    func configureGameData(_ game: Game, athletesResult: Result<[Athlete], AthleteError>, isLoadingAthletes: Bool) {
+    func configureGameData(_ game: Game, athletesResult: Result<[Athlete], AthleteError>, isLoadingAthletes: Bool, delegate: GameAthletesTableViewCellActionDelegate) {
+        self.delegate = delegate
         gameNameLabel.text = "\(game.city) \(game.year)"
         isLoading = isLoadingAthletes
         errorMessage = nil
@@ -92,6 +98,10 @@ extension GameAthletesTableViewCell: UICollectionViewDataSource, UICollectionVie
         }
         cell.configureAthleteData(athletes[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showAthleteDetail(athletes[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

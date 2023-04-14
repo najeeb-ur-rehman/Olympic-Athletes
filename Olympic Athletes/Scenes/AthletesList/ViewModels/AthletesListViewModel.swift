@@ -11,11 +11,15 @@ struct AthleteError: Error {
     let msg = "Failed to fetch Athletes"
 }
 
+protocol AthletesListViewModelActionDelegate {
+    func showAthleteDetail(_ athlete: Athlete)
+}
+
 protocol AthletesListViewModelType {
     func fetchGames()
     func isAthletesLoadingForGameId(_ id: Int) -> Bool
+    func showDetailForAthlete(_ athlete: Athlete)
     
-    var isLoading: Bool { get }
     var isLoadingPublisher: Published<Bool>.Publisher { get }
     
     var games: [Game] { get }
@@ -43,9 +47,11 @@ class AthletesListViewModel: AthletesListViewModelType {
     
     private var gameAthletesLoading = Set<Int>()
     private let service: GamesServiceType
+    private let delegate: AthletesListViewModelActionDelegate
     
-    init(_ service: GamesServiceType) {
+    init(_ service: GamesServiceType, actionsDelegate: AthletesListViewModelActionDelegate) {
         self.service = service
+        self.delegate = actionsDelegate
     }
     
     func fetchGames() {
@@ -82,6 +88,10 @@ class AthletesListViewModel: AthletesListViewModelType {
     
     func isAthletesLoadingForGameId(_ id: Int) -> Bool {
         return gameAthletesLoading.contains(id)
+    }
+    
+    func showDetailForAthlete(_ athlete: Athlete) {
+        delegate.showAthleteDetail(athlete)
     }
     
 }

@@ -19,11 +19,11 @@ class AthletesListViewController: UIViewController {
     
     
     // MARK: Builder Method
-    static func createInstance() -> UIViewController {
+    static func createInstance(delegate: AthletesListViewModelActionDelegate) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AthletesListViewController") as! AthletesListViewController
         let gamesService = GamesService(baseUrl: Environment.current.baseUrl, client: NetworkClient())
-        let viewModel = AthletesListViewModel(gamesService)
+        let viewModel = AthletesListViewModel(gamesService, actionsDelegate: delegate)
         vc.viewModel = viewModel
         return vc
     }
@@ -103,8 +103,17 @@ extension AthletesListViewController: UITableViewDataSource {
         }
         let game = viewModel.games[indexPath.row]
         let athletesResult = viewModel.gamesAthletesResult[game.gameId] ?? .success([])
-        cell.configureGameData(game, athletesResult: athletesResult, isLoadingAthletes: viewModel.isAthletesLoadingForGameId(game.gameId))
+        cell.configureGameData(game, athletesResult: athletesResult, isLoadingAthletes: viewModel.isAthletesLoadingForGameId(game.gameId), delegate: self)
         return cell
     }
+}
+
+extension AthletesListViewController: GameAthletesTableViewCellActionDelegate {
+    func showAthleteDetail(_ athlete: Athlete) {
+        viewModel.showDetailForAthlete(athlete)
+    }
+    
+    
+    
 }
 

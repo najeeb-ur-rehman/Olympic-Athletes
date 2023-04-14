@@ -8,5 +8,6 @@ target 'Olympic Athletes' do
   # Pods for Olympic Athletes
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SDWebImage'
+  pod 'MarkdownView'
 
 end

@@ -1,22 +1,26 @@
 PODS:
+  - MarkdownView (1.9.1)
   - MBProgressHUD (1.2.0)
   - SDWebImage (5.15.5):
     - SDWebImage/Core (= 5.15.5)
   - SDWebImage/Core (5.15.5)
 
 DEPENDENCIES:
+  - MarkdownView
   - MBProgressHUD (~> 1.2.0)
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - MarkdownView
     - MBProgressHUD
     - SDWebImage
 
 SPEC CHECKSUMS:
+  MarkdownView: 22249778219cc22901f1454e8355298dd0bda7f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
 
-PODFILE CHECKSUM: 02ef291e8f7709c7610df17d2def74b39f8add2e
+PODFILE CHECKSUM: 8aec39f51d2b1fe1e85bfc8c0e1fabb5144e1389
 
 COCOAPODS: 1.11.3

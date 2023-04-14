@@ -10,6 +10,10 @@
 		1D34BD6B29E63C5100322D18 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6A29E63C5100322D18 /* LoadingView.swift */; };
 		1D34BD6D29E66DA100322D18 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */; };
 		1D34BD6F29E6713000322D18 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */; };
+		1D6A5C7C29E8DF4A00D366AE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A5C7B29E8DF4A00D366AE /* AppCoordinator.swift */; };
+		1D80172529E80E65003EB4C6 /* AthleteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172429E80E65003EB4C6 /* AthleteDetailViewController.swift */; };
+		1D80172729E80E7C003EB4C6 /* AthleteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172629E80E7C003EB4C6 /* AthleteDetailView.swift */; };
+		1D80172B29E80EAB003EB4C6 /* AthleteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80172A29E80EAB003EB4C6 /* AthleteDetailViewModel.swift */; };
 		1D8DF85C29E4E9620037BA2D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */; };
 		1D8DF86029E4EF4B0037BA2D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF85F29E4EF4B0037BA2D /* NetworkClient.swift */; };
 		1D8DF86229E4EFCA0037BA2D /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF86129E4EFCA0037BA2D /* APIEndpoint.swift */; };
@@ -41,6 +45,10 @@
 		1D34BD6A29E63C5100322D18 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1D34BD6C29E66DA100322D18 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		1D34BD6E29E6713000322D18 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		1D6A5C7B29E8DF4A00D366AE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1D80172429E80E65003EB4C6 /* AthleteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailViewController.swift; sourceTree = "<group>"; };
+		1D80172629E80E7C003EB4C6 /* AthleteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailView.swift; sourceTree = "<group>"; };
+		1D80172A29E80EAB003EB4C6 /* AthleteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailViewModel.swift; sourceTree = "<group>"; };
 		1D8DF85B29E4E9620037BA2D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1D8DF85F29E4EF4B0037BA2D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		1D8DF86129E4EFCA0037BA2D /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
@@ -88,6 +96,40 @@
 				1D34BD6A29E63C5100322D18 /* LoadingView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		1D6A5C7A29E8DF2D00D366AE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D6A5C7B29E8DF4A00D366AE /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D80172329E80E45003EB4C6 /* AthleteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D80172929E80E8C003EB4C6 /* ViewModels */,
+				1D80172829E80E84003EB4C6 /* Views */,
+			);
+			path = AthleteDetail;
+			sourceTree = "<group>";
+		};
+		1D80172829E80E84003EB4C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D80172429E80E65003EB4C6 /* AthleteDetailViewController.swift */,
+				1D80172629E80E7C003EB4C6 /* AthleteDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D80172929E80E8C003EB4C6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D80172A29E80EAB003EB4C6 /* AthleteDetailViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		1D8DF85D29E4E9680037BA2D /* Extensions */ = {
@@ -149,6 +191,7 @@
 		1DF2BE2F29E344A700199095 /* Olympic Athletes */ = {
 			isa = PBXGroup;
 			children = (
+				1D6A5C7A29E8DF2D00D366AE /* Coordinator */,
 				1D34BD6929E63C3E00322D18 /* Components */,
 				1D8DF86629E4F08F0037BA2D /* Globals */,
 				1D8DF86529E4F0490037BA2D /* Services */,
@@ -201,6 +244,7 @@
 		1DF2BE4829E351DA00199095 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D80172329E80E45003EB4C6 /* AthleteDetail */,
 				1DF2BE4929E3523700199095 /* AthletesList */,
 			);
 			path = Scenes;
@@ -398,9 +442,12 @@
 			files = (
 				1DF2BE5C29E360EF00199095 /* AthleteCollectionViewCell.swift in Sources */,
 				1D8DF86229E4EFCA0037BA2D /* APIEndpoint.swift in Sources */,
+				1D6A5C7C29E8DF4A00D366AE /* AppCoordinator.swift in Sources */,
 				1D8DF87229E4FFB40037BA2D /* AthletesListViewModel.swift in Sources */,
 				1D8DF87029E4F55B0037BA2D /* AthleteGameResult.swift in Sources */,
+				1D80172729E80E7C003EB4C6 /* AthleteDetailView.swift in Sources */,
 				1D8DF86029E4EF4B0037BA2D /* NetworkClient.swift in Sources */,
+				1D80172529E80E65003EB4C6 /* AthleteDetailViewController.swift in Sources */,
 				1DF2BE4B29E3526B00199095 /* AthletesListViewController.swift in Sources */,
 				1D8DF86A29E4F1B40037BA2D /* BaseService.swift in Sources */,
 				1DF2BE5529E3549B00199095 /* GameAthletesTableViewCell.swift in Sources */,
@@ -415,6 +462,7 @@
 				1D8DF86429E4EFFE0037BA2D /* NetworkError.swift in Sources */,
 				1D8DF86C29E4F1D80037BA2D /* AthletesService.swift in Sources */,
 				1DF2BE5029E3531E00199095 /* Athlete.swift in Sources */,
+				1D80172B29E80EAB003EB4C6 /* AthleteDetailViewModel.swift in Sources */,
 				1D34BD6B29E63C5100322D18 /* LoadingView.swift in Sources */,
 				1DF2BE5229E353D900199095 /* AthletesListView.swift in Sources */,
 			);

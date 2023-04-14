@@ -8,8 +8,8 @@
 import Foundation
 
 protocol AthletesServiceType {
-    func getAthleteForId(_ id: Int, completion: @escaping (Result<Athlete, NetworkError>) -> (Void))
-    func getResultsForAthleteId(_ id: Int, completion: @escaping (Result<[AthleteGameResult], NetworkError>) -> Void)
+    func getAthleteForId(_ id: String, completion: @escaping (Result<Athlete, NetworkError>) -> (Void))
+    func getResultsForAthleteId(_ id: String, completion: @escaping (Result<[AthleteGameResult], NetworkError>) -> Void)
 }
 
 class AthletesService: BaseService, AthletesServiceType {
@@ -18,12 +18,12 @@ class AthletesService: BaseService, AthletesServiceType {
         super.init(baseUrl: URL(string: "athletes", relativeTo: baseUrl)! , client: client)
     }
     
-    func getAthleteForId(_ id: Int, completion: @escaping (Result<Athlete, NetworkError>) -> (Void)) {
+    func getAthleteForId(_ id: String, completion: @escaping (Result<Athlete, NetworkError>) -> (Void)) {
         let endpoint = APIEndpoint<String>(url: baseUrl, method: .get, path: "\(id)")
         client.request(route: endpoint, completion)
     }
     
-    func getResultsForAthleteId(_ id: Int, completion: @escaping (Result<[AthleteGameResult], NetworkError>) -> Void) {
+    func getResultsForAthleteId(_ id: String, completion: @escaping (Result<[AthleteGameResult], NetworkError>) -> Void) {
         let endpoint = APIEndpoint<String>(url: baseUrl, method: .get, path: "\(id)/results")
         client.request(route: endpoint, completion)
     }
